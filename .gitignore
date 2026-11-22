@@ -1,0 +1,10 @@
+node_modules
+.next
+.env*.local
+.DS_Store
+next-env.d.ts
+*.tsbuildinfo
+
+# ingestion output and Swiggy tokens: personal, never commit
+data/
+.forkcast/

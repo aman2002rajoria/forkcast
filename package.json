@@ -1,0 +1,42 @@
+{
+  "name": "forkcast",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rate the dish, not the restaurant. An AI layer on Swiggy for Bengaluru.",
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "build": "next build",
+    "start": "next start -p 3100",
+    "lint": "next lint",
+    "ingest:places": "tsx scripts/ingest/cli.ts places",
+    "ingest:details": "tsx scripts/ingest/cli.ts details",
+    "swiggy:login": "tsx scripts/ingest/cli.ts login",
+    "ingest:swiggy": "tsx scripts/ingest/cli.ts swiggy",
+    "ingest:analyze": "tsx scripts/ingest/cli.ts analyze",
+    "ingest:build": "tsx scripts/ingest/cli.ts build",
+    "ingest:all": "tsx scripts/ingest/cli.ts all",
+    "test:ingest": "tsx scripts/ingest/selftest.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "clsx": "2.1.1",
+    "lucide-react": "0.468.0",
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.49",
+    "tailwindcss": "3.4.17",
+    "tsx": "^4.20.6",
+    "typescript": "5.7.2"
+  },
+  "engines": {
+    "node": ">=20.12"
+  }
+}
