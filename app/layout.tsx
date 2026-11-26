@@ -3,6 +3,7 @@ import { Fira_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { StoreProvider } from "@/lib/store";
 import { Nav, Toast, TopBar } from "@/components/Shell";
+import { Analytics } from "@vercel/analytics/next";
 
 const fira = Fira_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "800", "900"], variable: "--font", display: "swap" });
 const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["500"], variable: "--mono", display: "swap" });
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="pb-[calc(var(--tabbar-h)+56px)]">{children}</main>
           <Toast />
         </StoreProvider>
+        <Analytics />
       </body>
     </html>
   );
